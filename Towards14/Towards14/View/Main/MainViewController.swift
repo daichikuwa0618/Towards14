@@ -50,6 +50,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
 
         // 選択された cell によって遷移先を切り替える
+        // NOTE: indexPath.row をハードコーディングによって分岐しているがあまり良い実装ではない
+        //       この記述によって意図しない ViewController へ遷移する等の問題が考えられる
+        //       対策としては enum を使う等がある。
         switch indexPath.row {
         case 0:
             navigationController?.pushViewController(CustomDefaultBrowserViewController.makeInstance(), animated: true)
