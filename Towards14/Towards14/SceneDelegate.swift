@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateInitialViewController() as! ViewController
+        let mainViewController = storyboard.instantiateInitialViewController() as! MainViewController
 
         navigationController = UINavigationController(rootViewController: mainViewController)
         navigationController?.navigationBar.prefersLargeTitles = true
