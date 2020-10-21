@@ -56,7 +56,7 @@
 		C945BEBB254024BD00A6E173 /* Towards14 */ = {
 			isa = PBXGroup;
 			children = (
-				C945BED02540484600A6E173 /* Main */,
+				C945BED12540505500A6E173 /* View */,
 				C945BEBC254024BD00A6E173 /* AppDelegate.swift */,
 				C945BEBE254024BD00A6E173 /* SceneDelegate.swift */,
 				C945BEC5254024BF00A6E173 /* Assets.xcassets */,
@@ -73,6 +73,14 @@
 				C945BEC0254024BD00A6E173 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C945BED12540505500A6E173 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C945BED02540484600A6E173 /* Main */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
