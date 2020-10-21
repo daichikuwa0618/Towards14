@@ -24,7 +24,13 @@ class CustomDefaultBrowserViewController: UIViewController {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url)
         } else {
-            print("Cannot Open URL")
+            showAlert("Error", message: "Cannot open this URL.")
         }
+    }
+
+    private func showAlert(_ title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
 }
