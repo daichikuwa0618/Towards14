@@ -56,6 +56,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             navigationController?.pushViewController(CustomDefaultBrowserViewController.makeInstance(), animated: true)
+        case 1:
+            navigationController?.pushViewController(StackViewBackgroundViewController.makeInstance(), animated: true)
         default:
             return
         }
