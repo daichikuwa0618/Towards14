@@ -17,6 +17,8 @@
 		C945BED62540629E00A6E173 /* CustomDefaultBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BED52540629E00A6E173 /* CustomDefaultBrowser.storyboard */; };
 		C945BED925413F1300A6E173 /* StackViewBackground.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BED825413F1300A6E173 /* StackViewBackground.storyboard */; };
 		C945BEDB25413F2500A6E173 /* StackViewBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEDA25413F2500A6E173 /* StackViewBackgroundViewController.swift */; };
+		C945BEE325469CB800A6E173 /* PushBackButtonLongPress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */; };
+		C945BEE525469CC700A6E173 /* PushBackButtonLongPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C945BED52540629E00A6E173 /* CustomDefaultBrowser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomDefaultBrowser.storyboard; sourceTree = "<group>"; };
 		C945BED825413F1300A6E173 /* StackViewBackground.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StackViewBackground.storyboard; sourceTree = "<group>"; };
 		C945BEDA25413F2500A6E173 /* StackViewBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackgroundViewController.swift; sourceTree = "<group>"; };
+		C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushBackButtonLongPress.storyboard; sourceTree = "<group>"; };
+		C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushBackButtonLongPressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		C945BED12540505500A6E173 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C945BEE125469C8B00A6E173 /* PushBackButtonLongPress */,
 				C945BED725413EFB00A6E173 /* StackViewBackground */,
 				C945BED22540626E00A6E173 /* CustomDefaultBrowser */,
 				C945BED02540484600A6E173 /* Main */,
@@ -109,6 +114,15 @@
 				C945BEDA25413F2500A6E173 /* StackViewBackgroundViewController.swift */,
 			);
 			path = StackViewBackground;
+			sourceTree = "<group>";
+		};
+		C945BEE125469C8B00A6E173 /* PushBackButtonLongPress */ = {
+			isa = PBXGroup;
+			children = (
+				C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */,
+				C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */,
+			);
+			path = PushBackButtonLongPress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +188,7 @@
 				C945BEC6254024BF00A6E173 /* Assets.xcassets in Resources */,
 				C945BED62540629E00A6E173 /* CustomDefaultBrowser.storyboard in Resources */,
 				C945BEC4254024BD00A6E173 /* Main.storyboard in Resources */,
+				C945BEE325469CB800A6E173 /* PushBackButtonLongPress.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +204,7 @@
 				C945BEBD254024BD00A6E173 /* AppDelegate.swift in Sources */,
 				C945BED42540628B00A6E173 /* CustomDefaultBrowserViewController.swift in Sources */,
 				C945BEBF254024BD00A6E173 /* SceneDelegate.swift in Sources */,
+				C945BEE525469CC700A6E173 /* PushBackButtonLongPressViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
