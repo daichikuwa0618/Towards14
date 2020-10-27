@@ -19,6 +19,12 @@
 		C945BEDB25413F2500A6E173 /* StackViewBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEDA25413F2500A6E173 /* StackViewBackgroundViewController.swift */; };
 		C945BEE325469CB800A6E173 /* PushBackButtonLongPress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */; };
 		C945BEE525469CC700A6E173 /* PushBackButtonLongPressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */; };
+		C945BEE92547E19D00A6E173 /* ChildrenOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEE82547E19D00A6E173 /* ChildrenOneViewController.swift */; };
+		C945BEEB2547E1AB00A6E173 /* ChildrenOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BEEA2547E1AB00A6E173 /* ChildrenOne.storyboard */; };
+		C945BEED2547E1B500A6E173 /* ChildrenTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BEEC2547E1B500A6E173 /* ChildrenTwo.storyboard */; };
+		C945BEEF2547E1C000A6E173 /* ChildrenTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEEE2547E1C000A6E173 /* ChildrenTwoViewController.swift */; };
+		C945BEF12547E1D000A6E173 /* ChildrenThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C945BEF02547E1D000A6E173 /* ChildrenThree.storyboard */; };
+		C945BEF32547E1DA00A6E173 /* ChildrenThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEF22547E1DA00A6E173 /* ChildrenThreeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		C945BEDA25413F2500A6E173 /* StackViewBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBackgroundViewController.swift; sourceTree = "<group>"; };
 		C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushBackButtonLongPress.storyboard; sourceTree = "<group>"; };
 		C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushBackButtonLongPressViewController.swift; sourceTree = "<group>"; };
+		C945BEE82547E19D00A6E173 /* ChildrenOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenOneViewController.swift; sourceTree = "<group>"; };
+		C945BEEA2547E1AB00A6E173 /* ChildrenOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildrenOne.storyboard; sourceTree = "<group>"; };
+		C945BEEC2547E1B500A6E173 /* ChildrenTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildrenTwo.storyboard; sourceTree = "<group>"; };
+		C945BEEE2547E1C000A6E173 /* ChildrenTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenTwoViewController.swift; sourceTree = "<group>"; };
+		C945BEF02547E1D000A6E173 /* ChildrenThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildrenThree.storyboard; sourceTree = "<group>"; };
+		C945BEF22547E1DA00A6E173 /* ChildrenThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenThreeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +131,24 @@
 		C945BEE125469C8B00A6E173 /* PushBackButtonLongPress */ = {
 			isa = PBXGroup;
 			children = (
+				C945BEE62547E0AC00A6E173 /* Children */,
 				C945BEE225469CB800A6E173 /* PushBackButtonLongPress.storyboard */,
 				C945BEE425469CC700A6E173 /* PushBackButtonLongPressViewController.swift */,
 			);
 			path = PushBackButtonLongPress;
+			sourceTree = "<group>";
+		};
+		C945BEE62547E0AC00A6E173 /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				C945BEEA2547E1AB00A6E173 /* ChildrenOne.storyboard */,
+				C945BEE82547E19D00A6E173 /* ChildrenOneViewController.swift */,
+				C945BEEC2547E1B500A6E173 /* ChildrenTwo.storyboard */,
+				C945BEEE2547E1C000A6E173 /* ChildrenTwoViewController.swift */,
+				C945BEF02547E1D000A6E173 /* ChildrenThree.storyboard */,
+				C945BEF22547E1DA00A6E173 /* ChildrenThreeViewController.swift */,
+			);
+			path = Children;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C945BEF12547E1D000A6E173 /* ChildrenThree.storyboard in Resources */,
+				C945BEED2547E1B500A6E173 /* ChildrenTwo.storyboard in Resources */,
+				C945BEEB2547E1AB00A6E173 /* ChildrenOne.storyboard in Resources */,
 				C945BED925413F1300A6E173 /* StackViewBackground.storyboard in Resources */,
 				C945BEC9254024BF00A6E173 /* LaunchScreen.storyboard in Resources */,
 				C945BEC6254024BF00A6E173 /* Assets.xcassets in Resources */,
@@ -202,6 +231,9 @@
 				C945BEC1254024BD00A6E173 /* MainViewController.swift in Sources */,
 				C945BEDB25413F2500A6E173 /* StackViewBackgroundViewController.swift in Sources */,
 				C945BEBD254024BD00A6E173 /* AppDelegate.swift in Sources */,
+				C945BEF32547E1DA00A6E173 /* ChildrenThreeViewController.swift in Sources */,
+				C945BEE92547E19D00A6E173 /* ChildrenOneViewController.swift in Sources */,
+				C945BEEF2547E1C000A6E173 /* ChildrenTwoViewController.swift in Sources */,
 				C945BED42540628B00A6E173 /* CustomDefaultBrowserViewController.swift in Sources */,
 				C945BEBF254024BD00A6E173 /* SceneDelegate.swift in Sources */,
 				C945BEE525469CC700A6E173 /* PushBackButtonLongPressViewController.swift in Sources */,

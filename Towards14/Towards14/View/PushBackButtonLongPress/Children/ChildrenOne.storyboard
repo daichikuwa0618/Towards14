@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QzK-bf-agi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Children One View Controller-->
+        <scene sceneID="6bc-Q9-1hc">
+            <objects>
+                <viewController id="QzK-bf-agi" customClass="ChildrenOneViewController" customModule="Towards14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qb4-VW-DJM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNr-VW-Grc">
+                                <rect key="frame" x="161" y="433" width="92" height="30"/>
+                                <state key="normal" title="画面遷移する"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="QzK-bf-agi" eventType="touchUpInside" id="Gm8-1I-MZH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-lG-hzO">
+                                <rect key="frame" x="183" y="353" width="48.5" height="40"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5DO-lG-hzO" firstAttribute="centerX" secondItem="Qb4-VW-DJM" secondAttribute="centerX" id="1G6-fX-frX"/>
+                            <constraint firstItem="WNr-VW-Grc" firstAttribute="centerY" secondItem="Qb4-VW-DJM" secondAttribute="centerY" id="5IP-3u-OLI"/>
+                            <constraint firstItem="WNr-VW-Grc" firstAttribute="top" secondItem="5DO-lG-hzO" secondAttribute="bottom" constant="40" id="Zmc-Zw-kou"/>
+                            <constraint firstItem="WNr-VW-Grc" firstAttribute="centerX" secondItem="Qb4-VW-DJM" secondAttribute="centerX" id="z7J-Ex-hGW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L1Y-81-xqd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvg-bz-Rd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>

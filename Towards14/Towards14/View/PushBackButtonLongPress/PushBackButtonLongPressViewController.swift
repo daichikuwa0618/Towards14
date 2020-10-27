@@ -18,4 +18,8 @@ class PushBackButtonLongPressViewController: UIViewController {
         let storyboard = UIStoryboard(name: "PushBackButtonLongPress", bundle: nil)
         return storyboard.instantiateInitialViewController() as! PushBackButtonLongPressViewController
     }
+
+    @IBAction func tapButton(_ sender: Any) {
+        navigationController?.pushViewController(ChildrenOneViewController.makeInstance(), animated: true)
+    }
 }
