@@ -12,7 +12,7 @@ class PushBackButtonLongPressViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "0番目", style: .plain, target: nil, action: nil)
     }
 
     static func makeInstance() -> PushBackButtonLongPressViewController {
