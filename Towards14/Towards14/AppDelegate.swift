@@ -15,6 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // NavigationBar の backButtonTitle を消す
+        // NOTE: 消したい VC の self.title, self.navigationItem.backButtonTitle = ""
+        //       としても実現できるが、 iOS 14 では backButton 長押しでタイトルが付くようになったので、それに対応している。
+        //       具体的には、 UIColor.clear を当てることでタイトルを透過させている。
+        // SEE: https://sarunw.com/posts/what-should-you-know-about-navigation-history-stack-in-ios14/
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+
+        appearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+
         return true
     }
 
