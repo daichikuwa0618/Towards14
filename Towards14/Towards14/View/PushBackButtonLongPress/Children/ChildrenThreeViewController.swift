@@ -12,8 +12,7 @@ class ChildrenThreeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:
-            "3番目", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "3番目", style: .plain, target: nil, action: nil)
     }
 
     static func makeInstance() -> ChildrenThreeViewController {
