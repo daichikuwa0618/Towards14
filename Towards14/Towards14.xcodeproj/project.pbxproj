@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92BA83F25502EB500D9E2C1 /* PageControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92BA83E25502EB500D9E2C1 /* PageControl.storyboard */; };
+		C92BA84125502EC700D9E2C1 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92BA84025502EC700D9E2C1 /* PageControlViewController.swift */; };
 		C945BEBD254024BD00A6E173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEBC254024BD00A6E173 /* AppDelegate.swift */; };
 		C945BEBF254024BD00A6E173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEBE254024BD00A6E173 /* SceneDelegate.swift */; };
 		C945BEC1254024BD00A6E173 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C945BEC0254024BD00A6E173 /* MainViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C92BA83E25502EB500D9E2C1 /* PageControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageControl.storyboard; sourceTree = "<group>"; };
+		C92BA84025502EC700D9E2C1 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		C945BEB9254024BD00A6E173 /* Towards14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towards14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C945BEBC254024BD00A6E173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C945BEBE254024BD00A6E173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C92BA83D25502EA100D9E2C1 /* UIPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				C92BA83E25502EB500D9E2C1 /* PageControl.storyboard */,
+				C92BA84025502EC700D9E2C1 /* PageControlViewController.swift */,
+			);
+			path = UIPageControl;
+			sourceTree = "<group>";
+		};
 		C945BEB0254024BD00A6E173 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 		C945BED12540505500A6E173 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C92BA83D25502EA100D9E2C1 /* UIPageControl */,
 				C945BEE125469C8B00A6E173 /* PushBackButtonLongPress */,
 				C945BED725413EFB00A6E173 /* StackViewBackground */,
 				C945BED22540626E00A6E173 /* CustomDefaultBrowser */,
@@ -212,6 +226,7 @@
 				C945BEF12547E1D000A6E173 /* ChildrenThree.storyboard in Resources */,
 				C945BEED2547E1B500A6E173 /* ChildrenTwo.storyboard in Resources */,
 				C945BEEB2547E1AB00A6E173 /* ChildrenOne.storyboard in Resources */,
+				C92BA83F25502EB500D9E2C1 /* PageControl.storyboard in Resources */,
 				C945BED925413F1300A6E173 /* StackViewBackground.storyboard in Resources */,
 				C945BEC9254024BF00A6E173 /* LaunchScreen.storyboard in Resources */,
 				C945BEC6254024BF00A6E173 /* Assets.xcassets in Resources */,
@@ -235,6 +250,7 @@
 				C945BEE92547E19D00A6E173 /* ChildrenOneViewController.swift in Sources */,
 				C945BEEF2547E1C000A6E173 /* ChildrenTwoViewController.swift in Sources */,
 				C945BED42540628B00A6E173 /* CustomDefaultBrowserViewController.swift in Sources */,
+				C92BA84125502EC700D9E2C1 /* PageControlViewController.swift in Sources */,
 				C945BEBF254024BD00A6E173 /* SceneDelegate.swift in Sources */,
 				C945BEE525469CC700A6E173 /* PushBackButtonLongPressViewController.swift in Sources */,
 			);
