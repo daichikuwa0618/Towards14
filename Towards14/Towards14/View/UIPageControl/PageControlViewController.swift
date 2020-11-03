@@ -12,6 +12,8 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
     private var scrollView: UIScrollView!
     private var pageControl: UIPageControl!
+    private var textField: UITextField! = UITextField()
+    private var button: UIButton! = UIButton()
 
     // 合計のページ数
     private var pageCount: Int = 5
@@ -22,6 +24,8 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
         setupScrollView()
         setupPageControl()
+        setupTextFileld()
+        setupButton()
 
         addContentToScrollView()
     }
@@ -55,6 +59,37 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
         self.view.addSubview(pageControl)
     }
 
+    private func setupTextFileld() {
+        // textField
+        textField.placeholder = "ページ数を入力"
+        textField.keyboardType = .decimalPad
+        textField.borderStyle = .roundedRect
+        textField.returnKeyType = .done
+        textField.clearButtonMode = .always
+        textField.translatesAutoresizingMaskIntoConstraints = false
+
+        self.view.addSubview(textField)
+
+        textField.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20).isActive = true
+        textField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        textField.widthAnchor.constraint(equalToConstant: 160).isActive = true
+    }
+
+    private func setupButton() {
+        button.setTitle("反映する", for: .normal)
+        button.backgroundColor = UIColor(red: 1, green: 0.1373, blue: 0.4549, alpha: 1.0)
+        button.layer.cornerRadius = 4
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        button.addTarget(self, action: #selector(self.tapButton(_:)), for: .touchUpInside)
+
+        self.view.addSubview(button)
+
+        button.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 10).isActive = true
+        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 120).isActive = true
+    }
+
     private func addContentToScrollView() {
         // scrollView に背景色を付けただけの UIView を pageCount だけ追加する
         for page in 0..<pageCount {
@@ -79,5 +114,11 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     // scrollViewのページ移動に合わせてpageControlの表示も移動させる
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+    }
+
+    @objc
+    private func tapButton(_ sender: UIButton) {
+        guard let text = textField.text, let page = Int(text) else { return }
+        self.pageCount = page
     }
 }
