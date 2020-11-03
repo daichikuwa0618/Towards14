@@ -11,7 +11,7 @@ import UIKit
 class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
     private var scrollView: UIScrollView! = UIScrollView()
-    private var pageControl: UIPageControl!
+    private var pageControl: UIPageControl! = UIPageControl()
     private var textField: UITextField! = UITextField()
     private var button: UIButton! = UIButton()
 
@@ -57,15 +57,20 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     }
 
     private func setupPageControl() {
-        // pageControlの表示位置とサイズの設定
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: 270, width: self.view.frame.size.width, height: 30))
         // pageControlのページ数を設定
         pageControl.numberOfPages = pageCount
         // pageControlのドットの色
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         // pageControlの現在のページのドットの色
         pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(pageControl)
+
+        NSLayoutConstraint.activate([
+            pageControl.widthAnchor.constraint(equalToConstant: self.view.frame.size.width),
+            pageControl.heightAnchor.constraint(equalToConstant: 30),
+            pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
     }
 
     private func setupTextFileld() {
