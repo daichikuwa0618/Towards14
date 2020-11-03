@@ -71,6 +71,8 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
             pageControl.heightAnchor.constraint(equalToConstant: 30),
             pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
+
+        pageControl.addTarget(self, action: #selector(self.tapPageControl(_:)), for: .touchUpInside)
     }
 
     private func setupTextFileld() {
@@ -151,5 +153,10 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
         pageCount = page
 
         updateViewsWithPages()
+    }
+
+    @objc
+    private func tapPageControl(_ sender: UIPageControl) {
+        scrollView.contentOffset.x = scrollView.frame.size.width * CGFloat(sender.currentPage)
     }
 }
