@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
         "CustomDefaultBrowser",
         "UIStackViewBackgroundColor",
         "PushBackButtonLongPress",
+        "UIPageControl",
     ]
 
     // MARK: - IBOutlet
@@ -61,6 +62,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             navigationController?.pushViewController(StackViewBackgroundViewController.makeInstance(), animated: true)
         case 2:
             navigationController?.pushViewController(PushBackButtonLongPressViewController.makeInstance(), animated: true)
+        case 3:
+            navigationController?.pushViewController(PageControlViewController.makeInstance(), animated: true)
         default:
             return
         }
