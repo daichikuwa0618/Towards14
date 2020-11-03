@@ -33,7 +33,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
     private func setupScrollView() {
         // scrollViewの画面表示サイズを指定
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 200, width: self.view.frame.size.width, height: scrollViewHeight))
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: scrollViewHeight))
         // scrollViewのサイズを指定（幅は1メニューに表示するViewの幅×ページ数）
         scrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(pageCount), height: scrollViewHeight)
         scrollView.delegate = self
@@ -45,7 +45,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
     private func setupPageControl() {
         // pageControlの表示位置とサイズの設定
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: 370, width: self.view.frame.size.width, height: 30))
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: 270, width: self.view.frame.size.width, height: 30))
         // pageControlのページ数を設定
         pageControl.numberOfPages = pageCount
         // pageControlのドットの色
