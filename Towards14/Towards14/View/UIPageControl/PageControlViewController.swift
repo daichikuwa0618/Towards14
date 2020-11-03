@@ -69,7 +69,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalToConstant: self.view.frame.size.width),
             pageControl.heightAnchor.constraint(equalToConstant: 30),
-            pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            pageControl.topAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
 
         pageControl.addTarget(self, action: #selector(self.tapPageControl(_:)), for: .touchUpInside)
@@ -86,7 +86,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
         self.view.addSubview(textField)
 
-        textField.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20).isActive = true
+        textField.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 20).isActive = true
         textField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 160).isActive = true
     }
