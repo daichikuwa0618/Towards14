@@ -69,7 +69,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalToConstant: self.view.frame.size.width),
             pageControl.heightAnchor.constraint(equalToConstant: 30),
-            pageControl.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            pageControl.topAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
 
         pageControl.addTarget(self, action: #selector(self.tapPageControl(_:)), for: .touchUpInside)
@@ -86,7 +86,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
         self.view.addSubview(textField)
 
-        textField.topAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 20).isActive = true
+        textField.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 20).isActive = true
         textField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 160).isActive = true
     }
@@ -130,14 +130,17 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     }
 
     private func makeColorView(page: Int) -> UIView {
-        // pageCount と page から被らない適当な色を作る
-        let startPoint: CGFloat = 0.3
-        let endPoint: CGFloat = 0.9
+        // page と pageCount の比を使って HSV の色環を一周させる
         let ratio: CGFloat = CGFloat(page) / CGFloat(pageCount)
-        let colorMagicNumber: CGFloat = startPoint + (endPoint - startPoint) * ratio
 
+        // scrollView と同サイズで位置をずらした UIView
         let colorView = UIView(frame: CGRect(x: self.view.frame.size.width * CGFloat(page), y: 0, width: self.view.frame.size.width, height: scrollViewHeight))
-        colorView.backgroundColor = UIColor(red: colorMagicNumber, green: 1.0 - colorMagicNumber, blue: colorMagicNumber, alpha: 1.0)
+        // ratio を用いることで page 毎に固有の色を付ける
+        colorView.backgroundColor = UIColor(hue: ratio, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        // page が増えると色の差が小さくなるのでボーダーを付ける
+        colorView.layer.borderWidth = 3
+        colorView.layer.borderColor = UIColor.black.cgColor
+        colorView.layer.cornerRadius = 16
 
         return colorView
     }
