@@ -22,6 +22,8 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.largeTitleDisplayMode = .never
+
         setupScrollView()
         setupPageControl()
         setupTextFileld()
@@ -38,7 +40,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     private func setupScrollView() {
         // scrollViewの画面表示サイズを指定
         scrollView = UIScrollView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: scrollViewHeight))
-        // scrollViewのサイズを指定（幅は1メニューに表示するViewの幅×ページ数）
+        // scrollView のサイズを指定（幅は 1 メニューに表示する View の幅 × ページ数）
         scrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(pageCount), height: scrollViewHeight)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
@@ -98,6 +100,21 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
+    // scrollView と pageControl を入力された数で再描画する
+    private func updateViewsWithPages() {
+        // scrollView の subViews を全て削除
+        scrollView.subviews.forEach { $0.removeFromSuperview() }
+        // scrollView のサイズを指定（幅は 1 メニューに表示する View の幅 × ページ数）
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(pageCount), height: scrollViewHeight)
+        // 左端に戻す
+        scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        // UIView を subView に追加
+        addContentToScrollView()
+        // pageControlのページ数を設定
+        pageControl.numberOfPages = pageCount
+        pageControl.currentPage = 0
+    }
+
     private func makeColorView(page: Int) -> UIView {
         // pageCount と page から被らない適当な色を作る
         let startPoint: CGFloat = 0.3
@@ -119,6 +136,8 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     @objc
     private func tapButton(_ sender: UIButton) {
         guard let text = textField.text, let page = Int(text) else { return }
-        self.pageCount = page
+        pageCount = page
+
+        updateViewsWithPages()
     }
 }
