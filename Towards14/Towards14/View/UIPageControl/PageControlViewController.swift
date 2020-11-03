@@ -10,7 +10,7 @@ import UIKit
 
 class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
-    private var scrollView: UIScrollView!
+    private var scrollView: UIScrollView! = UIScrollView()
     private var pageControl: UIPageControl!
     private var textField: UITextField! = UITextField()
     private var button: UIButton! = UIButton()
@@ -38,15 +38,22 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
     }
 
     private func setupScrollView() {
-        // scrollViewの画面表示サイズを指定
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: scrollViewHeight))
         // scrollView のサイズを指定（幅は 1 メニューに表示する View の幅 × ページ数）
         scrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(pageCount), height: scrollViewHeight)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         // 水平方向のスクロールインジケータを非表示にする
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(scrollView)
+
+        NSLayoutConstraint.activate([
+            scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+            scrollView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width),
+            scrollView.heightAnchor.constraint(equalToConstant: scrollViewHeight),
+        ])
     }
 
     private func setupPageControl() {
@@ -130,7 +137,7 @@ class PageControlViewController: UIViewController, UIScrollViewDelegate {
 
     // scrollViewのページ移動に合わせてpageControlの表示も移動させる
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(scrollView.contentOffset.x / self.view.frame.size.width)
     }
 
     @objc
