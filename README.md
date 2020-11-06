@@ -21,6 +21,7 @@ iOS 14 対応をまとめたサンプルアプリです。
 - [デフォルトブラウザを変更した際に \`canOpenURL\(\_:\)\` が false になる問題を修正](https://github.com/daichikuwa0618/Towards14/pull/6)
 - [iOS 14 端末で UIStackView の backgroundColor が見えるようになったので不要な背景色を削除](https://github.com/daichikuwa0618/Towards14/pull/10)
 - [iOS 14 で backButton 長押しでタイトルが付くようになったのに対応](https://github.com/daichikuwa0618/Towards14/pull/11)
+- [バックボタンタイトル・履歴メニュータイトルの制御を navigationItem\.backButtonDisplayMode に変更](https://github.com/daichikuwa0618/Towards14/pull/14)
 
 ### 問題を再現してみたい場合:
 シミュレーターや実機等で問題を発現し、触ってみたい場合は、 `iOS13` ブランチが適しています。
